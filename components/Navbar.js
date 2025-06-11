@@ -1,5 +1,4 @@
 import React from "react";
-import { Phone } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -39,7 +38,7 @@ function Navbar() {
           </svg>
 
           <Select>
-            <SelectTrigger className="w-[150px] focus:ring-0">
+            <SelectTrigger className="w-[150px] focus:ring-0 font-bold hover:cursor-pointer hover:border-zinc-600">
               <SelectValue placeholder="Transport" />
             </SelectTrigger>
             <SelectContent>
