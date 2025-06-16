@@ -3,10 +3,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import Link from "next/link";
 import { Button } from "./ui/button";
 
+
 function Navbar() {
   return (
-    <header className="bg-transparent ">
-      <nav className="fixed top-0 left-0 right-0 w-full backdrop-blur-sm border-b border-zinc-200 py-5 pl-25 flex items-center justify-between">
+    <header className="">
+      <nav className="fixed z-10 top-0 left-0 right-0 w-full bg-white backdrop-blur-md border-b border-zinc-200 py-5 pl-25 flex items-center justify-between">
         <div className="flex items-center space-x-11">
           <svg
             width="72"
@@ -60,7 +61,7 @@ function Navbar() {
           </Link>
         </li>
         <li className="relative group cursor-pointer">
-          <Link href="/room" className="group-hover:text-green-900 transition-colors duration-300">
+          <Link href="./components" className="group-hover:text-green-900 transition-colors duration-300">
             Room
             <span className="block h-[2px] w-full bg-green-900 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
           </Link>
@@ -80,8 +81,8 @@ function Navbar() {
       </ul>
 
       <div className="flex items-center justify-center gap-2 ml-10 mr-25">
-        <Button  className="hover:cursor-pointer hover:bg-green-900">Log In</Button>
-        <Button  className="hover:cursor-pointer hover:bg-green-900">Sign Up</Button>
+        <Button  className="hover:cursor-pointer hover:bg-green-900"><Link href="./login">Log In</Link></Button>
+        <Button  className="hover:cursor-pointer hover:bg-green-900"><Link href="./signup">Sign In</Link></Button>
       </div>
       
     </div>

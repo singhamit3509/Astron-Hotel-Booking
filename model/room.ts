@@ -33,6 +33,21 @@ const RoomSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  location: {
+    type: String,
+    required: true,
+  },
+  roomType: {
+    type: String,
+    enum: ["Standard", "Deluxe", "Suite"],
+    default: "Standard",
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 4,
+  },
 });
 
 const Room = models.Room || model('Room', RoomSchema);
