@@ -39,7 +39,7 @@ function Navbar() {
           </svg>
 
           <Select>
-            <SelectTrigger className="w-[150px] focus:ring-0 font-bold hover:cursor-pointer hover:border-zinc-600">
+            <SelectTrigger className="w-[150px] focus:ring-0 border-zinc-950 font-bold hover:cursor-pointer hover:border-zinc-600">
               <SelectValue placeholder="Transport" />
             </SelectTrigger>
             <SelectContent>
@@ -82,7 +82,7 @@ function Navbar() {
 
       <div className="flex items-center justify-center gap-2 ml-10 mr-25">
         <Button  className="hover:cursor-pointer hover:bg-green-900"><Link href="./login">Log In</Link></Button>
-        <Button  className="hover:cursor-pointer hover:bg-green-900"><Link href="./signup">Sign In</Link></Button>
+        <Button  className="hover:cursor-pointer hover:bg-green-900"><Link href="./register">Sign Up</Link></Button>
       </div>
       
     </div>

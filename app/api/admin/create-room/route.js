@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/utils";
 import Room from "@/model/room";
 
-// POST route: for room creation
+
 export async function POST(req) {
   try {
     await connectDB();
     const data = await req.json();
 
-    // Optional: simple validation
+    
     if (!data.title || !data.description || !data.pricePerNight || !data.location) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }

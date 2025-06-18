@@ -1,38 +1,45 @@
-import React from 'react'
+'use client'
 
-function login() {
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+
+export default function LoginPage() {
   return (
-    <div className="flex items-center justify-center bg-zinc-100">
-        <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-          <h3 className="text-xl font-semibold text-centre mb-5 text-zinc-700">
-            Login
-          </h3>
-          <div >
-            <form className="space-y-4">
-            <div>
-              <input
-                type="email"
-                placeholder="Enter Email Id"
-                className="w-full px-4 py-2 border border-zinc-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-500"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                className="w-full px-4 py-2 border border-zinc-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-500"
-                required
-              />
-            </div>
-            <div>
-              <input type="submit" className="w-full bg-zinc-700 text-white py-2 rounded hover:bg-zinc-800" value="Login"/>
-            </div>
-            </form>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 auto-manage">
+      <Card className="w-full max-w-sm shadow-lg">
+        <CardContent className="p-6 space-y-4">
+          <h1 className="text-2xl font-bold text-center">Login</h1>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" placeholder="Enter your email" />
           </div>
-        </div>
-      </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" placeholder="Enter your password" />
+          </div>
+
+          <Button className="w-full bg-green-600 hover:bg-green-700">
+            <ArrowRight className="mr-2 h-5 w-5" /> Sign in
+          </Button>
+
+          <p className="text-center text-sm">
+            Don’t have an account?{' '}
+            <Link href="/register" className="text-blue-600 hover:underline">
+              Register
+            </Link>
+          </p>
+
+          <Button className="w-full bg-black text-white hover:bg-gray-900">
+            Sign in with Google
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
   )
 }
-
-export default login
